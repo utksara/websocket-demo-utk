@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <title>Web socket test</title>
+    <body>
+        <script >
+            const ws = new WebSocket("ws://localhost:8082");    
+            ws.addEventListener("open", () => {
+                console.log("we are connected");
+            });
+
+            ws.send("echo hello")
+        </script>
+        <h1 style=" text-align  : center;">click on this button to send message</h1>
+        <div id = "click">
+            <button style="
+            margin: 0;
+            position:   absolute;
+            top: 20%;
+            left: 50%;"> Button </button>
+        </div>
+    </body>
+</html>
